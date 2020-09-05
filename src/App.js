@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import Alias from './Alias';
+import { Client } from 'boardgame.io/react';
 
-class App extends Component {
-    render() {
-        return (
-            <Alias />
-        );
-    }
-}
+import Lama from "./Lama";
+
+const App = Client({
+    game: Lama,
+});
 
 export default App;
