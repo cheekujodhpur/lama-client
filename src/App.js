@@ -5,6 +5,7 @@ import Lama from "./Lama";
 
 const App = Client({
     game: Lama,
+    numPlayers: 3
 });
 
 export default App;
