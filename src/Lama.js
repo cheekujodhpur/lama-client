@@ -61,6 +61,9 @@ const Lama = {
                 return INVALID_MOVE;
             }
         },
+        fold: (G, ctx) => {
+            ctx.events.pass({ remove: true });
+        },
     },
 };
 
