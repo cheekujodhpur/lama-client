@@ -1,4 +1,3 @@
-import React, { Component } from 'react';
 import { Client } from 'boardgame.io/react';
 
 import Lama from "./Lama";
