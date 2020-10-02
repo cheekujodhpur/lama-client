@@ -65,6 +65,13 @@ const Lama = {
             ctx.events.pass({ remove: true });
         },
     },
+
+    turn: {
+        onMove: (G, ctx) => {
+            if (G.hands[ctx.currentPlayer].length === 0)
+                ctx.events.endGame();
+        }
+    },
 };
 
 export default Lama;
