@@ -49,12 +49,14 @@ const Lama = {
     moves: {
         drawCard: (G, ctx) => {
             drawToHand(G.hands[ctx.currentPlayer], G.deck);
+            ctx.events.endTurn();
         },
         playCard: (G, ctx, card) => {
             let hand = G.hands[ctx.currentPlayer];
             if (isValidMove(hand, G.discard, card)) {
                 let idx = hand.indexOf(card);
                 transferCard(hand, G.discard, idx);
+                ctx.events.endTurn();
             } else {
                 return INVALID_MOVE;
             }
